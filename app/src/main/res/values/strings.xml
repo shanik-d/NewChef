@@ -2,7 +2,7 @@
     <string name="app_name">NewChef</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_resources">Resources</string>
     <string name="user_name">UserNameHere</string>
     <string name="skills_tracked">Skills Tracked: %d</string>
     <string name="skills_learned">Skills Learned: %d</string>

@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.newchef.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="com.example.newchef.ui.resources.ResourcesFragment"
+        android:label="@string/title_resources"
+        tools:layout="@layout/fragment_resources" />
 </navigation>

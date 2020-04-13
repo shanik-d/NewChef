@@ -1,4 +1,4 @@
-package com.example.newchef.ui.notifications
+package com.example.newchef.ui.resources
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.newchef.R
 
-class NotificationsFragment : Fragment() {
+class ResourcesFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var resourcesViewModel: ResourcesViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        resourcesViewModel =
+                ViewModelProviders.of(this).get(ResourcesViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_resources, container, false)
+        val textView: TextView = root.findViewById(R.id.text_resources)
+        resourcesViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
