@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="pastelGreen">#3DFCA1</color>
-    <color name="accentGreen">#1A535C</color>
-    <color name="pastelBlue">#76C5E8</color>
+    <color name="primaryGreen">#4caf50</color>
+    <color name="primaryGreenDark">#087f23</color>
+    <color name="primaryGreenLight">#80e27e</color>
+    <color name="darkGrey">#212121</color>
+    <color name="secondaryBlue">#039be5</color>
+    <color name="secondaryBlueDark">#006db3</color>
+    <color name="secondaryBlueLight">#63ccff</color>
     <color name="pastelSalmon">#FF6B6B</color>
     <color name="slateWhite">#DCDAD5</color>
 </resources>
