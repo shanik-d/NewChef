@@ -24,16 +24,6 @@ class HomeFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
-        /** the below lines pass the text in the view to the viewmodel. The viewmodel updates the
-        * text and it gets applied here... I think.
-        * But shouldn't the model contain the data to change the text to? As I understand it, the
-        * viewmodel should contain only presentational logic.
-        */
-//        val textView: TextView = root.findViewById(R.id.text_home)
-//        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
-
         val skillsTrackedTextView: TextView = root.findViewById(R.id.home_fragment_skills_tracked)
         val skillsLearnedTextView: TextView = root.findViewById(R.id.home_fragment_skills_learned)
         val nextSkillTextView: TextView = root.findViewById(R.id.home_fragment_next_skill)
@@ -44,7 +34,7 @@ class HomeFragment : Fragment() {
             skillsLearnedTextView.text = getString(R.string.skills_learned, it.count())
         })
         homeViewModel.nextSkill.observe(viewLifecycleOwner, Observer {
-            nextSkillTextView.text = getString(R.string.next_skill, it.name)
+            nextSkillTextView.text = getString(R.string.next_skill, it.friendly_name)
         })
         return root
     }
