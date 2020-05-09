@@ -33,6 +33,19 @@ class HomeFragment : Fragment() {
 //        homeViewModel.text.observe(viewLifecycleOwner, Observer {
 //            textView.text = it
 //        })
+
+        val skillsTrackedTextView: TextView = root.findViewById(R.id.home_fragment_skills_tracked)
+        val skillsLearnedTextView: TextView = root.findViewById(R.id.home_fragment_skills_learned)
+        val nextSkillTextView: TextView = root.findViewById(R.id.home_fragment_next_skill)
+        homeViewModel.trackedSkills.observe(viewLifecycleOwner, Observer {
+            skillsTrackedTextView.text = getString(R.string.skills_tracked, it.count())
+        })
+        homeViewModel.learnedSkills.observe(viewLifecycleOwner, Observer {
+            skillsLearnedTextView.text = getString(R.string.skills_learned, it.count())
+        })
+        homeViewModel.nextSkill.observe(viewLifecycleOwner, Observer {
+            nextSkillTextView.text = getString(R.string.next_skill, it.name)
+        })
         return root
     }
 }

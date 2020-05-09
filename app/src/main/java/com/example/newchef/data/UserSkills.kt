@@ -1,6 +1,6 @@
 package com.example.newchef.data
 
-object UserSkills {
+class UserSkills {
     // TODO: review use of val/var with mutable arrays
     private val skillsLearned = mutableSetOf<Skills>()
     private val skillsTracked = mutableSetOf<Skills>()
